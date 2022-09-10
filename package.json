@@ -8,7 +8,7 @@
     "node": "16.x"
   },
   "scripts": {
-    "build": "npm install --save --legacy-peer-deps && cd ./frontend && npm install --save --legacy-peer-deps && npm run build",
+    "build": "npm install --save --legacy-peer-deps && node server.js && cd ./frontend && npm install --save --legacy-peer-deps && npm run build",
     "start": "node server.js",
     "both": "nodemon server.js && cd frontend && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
