@@ -1,21 +1,35 @@
 {
-  "name": "mern-stack-ecommerce-website",
+  "name": "backend",
+  "type": "module",
   "version": "1.0.0",
-  "description": "To create this E-commerce web application, I follow these steps :",
-  "main": "index.js",
-  "scripts": {
-    "build": "cd ./backend && npm install --save --legacy-peer-deps && cd ../frontend && npm install --save --legacy-peer-deps && npm run build",
-    "start": "nodemon backend/server.js && cd frontend && npm run start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": "16.x"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://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@github.com/jokoul/project-33-garatimbi-ecommerce.git"
+  "scripts": {
+    "build": "npm install --save --legacy-peer-deps && cd frontend && npm install --save --legacy-peer-deps && npm run build",
+    "start": "node server.js",
+    "both": "nodemon server.js && cd frontend && npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jokoul/project-33-garatimbi-ecommerce/issues"
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.30.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mailgun-js": "^0.22.0",
+    "mongoose": "^6.4.4",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.19",
+    "streamifier": "^0.1.1"
   },
-  "homepage": "https://github.com/jokoul/project-33-garatimbi-ecommerce#readme"
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
